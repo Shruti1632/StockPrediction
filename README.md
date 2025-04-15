@@ -1,28 +1,88 @@
-# StockPrediction
+# 📈 Stock Prediction Using LSTM
 
-This project involves the design and implementation of a model to forecast future values of leading food industry stocks, including Tata Consumer Products, Hindustan Unilever, Nestle India, Britannia, and ITC, over a 10-day horizon. The project employs advanced deep learning techniques and real-time data streaming to ensure accurate and up-to-date predictions.
+This project demonstrates a Python-based solution for forecasting stock prices of major food industry companies—**Tata Consumer Products**, **Hindustan Unilever**, **Nestle India**, **Britannia**, and **ITC**—over a short-term horizon. It utilizes **time-series analysis** techniques to generate predictions based on historical stock data, offering users valuable insights into potential future trends. The application integrates **real-time market data** using `yfinance` and delivers a **visual and interactive interface** through **Streamlit**, making it accessible to both technical and non-technical users.
 
-# Key Features
-- **Forecasting with Long Short-Term Memory (LSTM) Networks**: The core of this project is the use of LSTM networks, a type of recurrent neural network (RNN) known for its ability to capture long-term dependencies in sequential data. LSTMs are particularly well-suited for time series forecasting, making them ideal for predicting stock prices based on historical data.
+---
 
-- **Live Market Data with Yfinance**: To ensure that the model's predictions are as current as possible, Yfinance is utilized to gather and stream live market data. Yfinance is a powerful library that provides easy access to historical market data, allowing for real-time updates and analysis.
+## 🔍 Key Features
 
-- **User-friendly Interface with Streamlit**: The project is deployed using Streamlit, a popular open-source app framework designed for machine learning and data science projects. Streamlit allows for the creation of interactive and user-friendly web applications with minimal effort. It is particularly useful for deploying machine learning models and visualizing data in real-time.
+### 🧠 Forecasting with LSTM (Long Short-Term Memory) Networks
+- Utilizes LSTM, a type of Recurrent Neural Network (RNN) ideal for sequential and time-series data.
+- Captures both short-term and long-term trends in stock market patterns using historical data.
+- The model is trained on closing prices and evaluated for prediction accuracy over a rolling 10-day window.
 
-# Technologies Used
-1. **Python**: The primary programming language used for developing the model and the application. Python is widely used in data science and machine learning due to its extensive libraries and ease of use.
+### 📊 Live Market Data via Yfinance
+- Implements the **`yfinance`** library to fetch **real-time stock data** from Yahoo Finance.
+- Users can stream the most recent market data before making predictions.
+- Historical stock data is used to train and update the model dynamically.
 
-2. **TensorFlow/Keras**: These libraries are used to build and train the LSTM network. TensorFlow is a comprehensive open-source platform for machine learning, and Keras is its high-level API that allows for easy and fast prototyping.
+### 🌐 Interactive Web App with Streamlit
+- Deployed using **Streamlit**, allowing users to:
+  - Select a stock.
+  - View historical and real-time data.
+  - Visualize model predictions with interactive plots.
+- No need for web development experience—just run the app and start predicting!
 
-3. **Yfinance**: This library is used to fetch historical and real-time stock market data. It simplifies the process of accessing data from Yahoo Finance, making it easy to integrate live data streaming into the application.
+---
 
-4. **Streamlit**: An open-source app framework used to deploy the machine learning model as an interactive web application. Streamlit allows for the creation of custom web interfaces with simple Python scripts.
+## 🧰 Technologies Used
 
-5. **Pandas**: A powerful data manipulation library in Python used for data preprocessing and analysis. It is essential for handling time series data and preparing it for model training.
+| Technology     | Purpose                                                                 |
+|----------------|-------------------------------------------------------------------------|
+| Python         | Core programming language for data processing and application logic     |
+| Pandas         | Data manipulation and analysis, especially for time-series stock data   |
+| NumPy          | Numerical operations and support for arrays/matrices                    |
+| Matplotlib     | Basic visualization of historical stock trends                          |
+| yfinance       | Fetches real-time and historical stock market data from Yahoo Finance   |
+| Streamlit      | Creates an interactive and user-friendly web app interface              |
+| scikit-learn   | Basic preprocessing and data scaling utilities                          |
 
-6. **NumPy**: A fundamental library for numerical computing in Python. It provides support for arrays and matrices, along with a collection of mathematical functions to operate on these data structures.
+---
 
-# Deployment
-The model was deployed using Streamlit, providing an interactive web interface where users can input parameters, view real-time stock data, and see the model's predictions. This deployment ensures that the application is accessible and easy to use, even for individuals without a deep understanding of machine learning.
+## 🚀 Getting Started
 
-For a detailed walkthrough of the implementation and to access the source code, visit the repository. This project is an excellent starting point for beginners interested in machine learning, stock price prediction, and deploying interactive web applications.
+To set up and run the **Stock Prediction** application locally, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Shruti1632/StockPrediction.git
+   cd StockPrediction
+   ```
+
+2. **Install dependencies**:
+   Ensure you have Python installed. Then, install the required libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the application**:
+   ```bash
+   streamlit run StocksPrediction.py
+   ```
+
+   This will launch the Streamlit web application in your default browser.
+
+---
+
+## 📁 Repository Structure
+
+- `StocksPrediction.py`: Main script containing the Streamlit application and LSTM model implementation.
+- `README.md`: Documentation and overview of the project.
+- `LICENSE`: MIT License file for the project.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙋‍♀️ Author
+
+**Shruti Pawar**
+
+- [GitHub](https://github.com/Shruti1632)
+- [LinkedIn](https://www.linkedin.com/in/shruti-pawar-0a9031235/)
+
+---
